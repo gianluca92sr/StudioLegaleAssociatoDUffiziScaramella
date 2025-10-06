@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {RouterLink} from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -15,7 +16,7 @@ import {Component} from '@angular/core';
               Lo Studio Legale Associato D'Uffizi & Scaramella offre servizi legali di alta qualità
               con un approccio mirato alle esigenze specifiche di ogni cliente.
             </p>
-            <button class="bg-white text-blue-700 hover:bg-blue-50 font-bold px-6 py-3 rounded-md">
+            <button class="bg-white text-blue-700 hover:bg-blue-50 font-bold px-6 py-3 rounded-md" routerLink="/contatti">
               Contattaci
             </button>
           </div>
@@ -76,7 +77,7 @@ import {Component} from '@angular/core';
           </div>
 
           <div class="text-center mt-12">
-            <button class="bg-blue-700 text-white hover:bg-blue-800 px-6 py-3 rounded-md">
+            <button class="bg-blue-700 text-white hover:bg-blue-800 px-6 py-3 rounded-md" routerLink="/servizi">
               Scopri tutti i servizi
             </button>
           </div>
@@ -132,6 +133,8 @@ import {Component} from '@angular/core';
     </div>
   `,
   standalone: true,
-  imports: []
+  imports: [
+    RouterLink
+  ]
 })
 export class HomeComponent {}

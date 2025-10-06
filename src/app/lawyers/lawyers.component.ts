@@ -13,7 +13,7 @@ import { Component } from '@angular/core';
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div class="border border-border shadow-md hover:shadow-lg transition-shadow rounded-lg bg-card">
             <div class="p-6">
               <div class="flex flex-col items-center text-center mb-6">

@@ -19,9 +19,9 @@ import {NgIf} from '@angular/common';
 
           <!-- Desktop Navigation -->
           <nav class="hidden md:flex space-x-2">
-            <a routerLink="/" routerLinkActive="bg-blue-700 text-white"
+            <a routerLink="/home" routerLinkActive="bg-blue-700 text-white"
                class="flex items-center space-x-1 px-4 py-2 rounded-md"
-               [class]="isActive('/') ? 'bg-blue-700 text-white' : 'text-blue-900 hover:bg-blue-100'">
+               [class]="isActive('/home') ? 'bg-blue-700 text-white' : 'text-blue-900 hover:bg-blue-100'">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
                 <polyline points="9 22 9 12 15 12 15 22"/>
@@ -87,7 +87,7 @@ import {NgIf} from '@angular/common';
         <nav *ngIf="isMenuOpen()" class="mt-4 flex flex-col space-y-2 md:hidden">
           <a routerLink="/" routerLinkActive="bg-blue-700 text-white"
              class="flex items-center space-x-1 px-4 py-2 rounded-md"
-             [class]="isActive('/') ? 'bg-blue-700 text-white' : 'text-blue-900'"
+             [class]="isActive('/home') ? 'bg-blue-700 text-white' : 'text-blue-900 hover:bg-blue-100'"
              (click)="closeMenu()">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
