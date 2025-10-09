@@ -1,1 +1,5 @@
-@use "tailwindcss";
+// Cambio colore blue di bootstrap
+//$blue:    #1e40af;
+$blue: #023a85;
+@import "bootstrap/scss/bootstrap";
+@import "bootstrap-icons/font/bootstrap-icons.css";

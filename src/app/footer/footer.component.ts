@@ -1,68 +1,58 @@
-import { Component } from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild, viewChild} from '@angular/core';
+import {TrimPipe} from '../core/pipe/trim.pipe';
 
 @Component({
   selector: 'app-footer',
   template: `
-    <footer class="border-t border-blue-200 bg-blue-900 text-white py-12">
-      <div class="container mx-auto px-4">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div class="md:col-span-2">
-            <div class="flex items-center space-x-2 mb-4">
-              <div class="bg-white p-2 rounded-lg">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-700">
-                  <path d="m9 5 7 7-7 7"/>
-                </svg>
-              </div>
-              <h2 class="text-xl font-bold">Studio Legale Associato<br />D'Uffizi & Scaramella</h2>
-            </div>
-            <p class="text-blue-100 mb-4">
+
+    <footer class="border-top border-primary bg-primary text-white py-5">
+      <div class="container-fluid px-4">
+        <div class="row">
+          <div class="col-12">
+            <!--            <div class="d-flex gap-2 align-items-center mb-3">-->
+            <img width="200px" src="/logoWhite.png" alt="logoWhite">
+            <!--            </div>-->
+          </div>
+        </div>
+
+        <div class="row g-4 align-items-start mt-3">
+          <div class="col-md-6">
+            <h3 class="h6 fw-semibold mb-3">Lo Studio</h3>
+            <p class="text-white mb-3" style="text-align: justify">
               Lo Studio Legale Associato D'Uffizi & Scaramella offre consulenza legale specializzata
               in vari ambiti del diritto, con un approccio personalizzato e attento alle esigenze dei clienti.
             </p>
-            <div class="flex space-x-4">
-              <button class="border border-white text-white p-2 rounded-md hover:bg-white hover:text-blue-700">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                  <polyline points="22,6 12,13 2,6"/>
-                </svg>
-              </button>
-              <button class="border border-white text-white p-2 rounded-md hover:bg-white hover:text-blue-700">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-                </svg>
-              </button>
-            </div>
           </div>
 
-          <div>
-            <h3 class="text-lg font-semibold mb-4">Contatti</h3>
-            <ul class="space-y-2 text-blue-100">
-              <li class="flex items-start">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2 mt-0.5 flex-shrink-0">
-                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                  <circle cx="12" cy="10" r="3"/>
-                </svg>
-                <span>Via Roma, 123 - 00100 Roma (RM)</span>
+          <div class="col-md-3">
+            <h3 class="h6 fw-semibold mb-3">Contatti</h3>
+            <ul class="list-unstyled text-white">
+              <li class="d-flex align-items-start mb-2">
+                <i class="bi bi-geo-alt-fill"></i>
+                <span class="ms-2">Viale Parioli, 93/G, 00197 Roma (RM)</span>
               </li>
-              <li class="flex items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
-                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-                </svg>
-                <span>+39 06 1234567</span>
+              <li class="d-flex align-items-start mb-2">
+                <i class="bi bi-geo-alt-fill"></i>
+                <span class="ms-2">Via Casilina, 243, 00038 Valmontone (RM)</span>
               </li>
-              <li class="flex items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
-                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                  <polyline points="22,6 12,13 2,6"/>
-                </svg>
-                <span>info&#64;studiolegaleduffiziscaramella.it</span>
+              <li class="d-flex align-items-center mb-2">
+                <i class="bi bi-telephone-fill"></i>
+                <span class="ms-2">{{ phone }}</span>
+              </li>
+              <li class="d-flex align-items-center mb-2">
+                <i class="bi bi-printer-fill"></i>
+                <span class="ms-2">{{ fax }}</span>
+              </li>
+              <li class="d-flex align-items-center">
+                <i class="bi bi-envelope-at-fill"></i>
+                <span class="ms-2">{{ email }}</span>
               </li>
             </ul>
           </div>
 
-          <div>
-            <h3 class="text-lg font-semibold mb-4">Orari</h3>
-            <ul class="space-y-2 text-blue-100">
+          <div class="col-md-3">
+            <h3 class="h6 fw-semibold mb-3">Orari</h3>
+            <ul class="list-unstyled text-white">
               <li>Lunedì - Venerdì: 9:00 - 18:00</li>
               <li>Sabato: 9:00 - 13:00</li>
               <li>Domenica: Chiuso</li>
@@ -70,14 +60,43 @@ import { Component } from '@angular/core';
           </div>
         </div>
 
-        <div class="border-t border-blue-700 mt-8 pt-8 text-center text-blue-200">
+        <div class="row">
+          <div class="col-12">
+            <div class="d-flex gap-2">
+              <a href='mailto:{{email}}' #mailTo title="Invia Email">
+                <button class="btn btn-outline-light p-2">
+                  <i class="bi bi-envelope"></i>
+                </button>
+              </a>
+              <a href="tel:{{phone | trim}}" #telTo title="Chiama">
+                <button class="btn btn-outline-light p-2">
+                  <i class="bi bi-telephone"></i>
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="border-top border-primary mt-4 pt-3 text-center text-white">
           <p>© {{ currentYear }} Studio Legale Associato D'Uffizi & Scaramella. Tutti i diritti riservati.</p>
         </div>
       </div>
     </footer>
   `,
+  imports: [
+    TrimPipe
+  ],
   standalone: true
 })
-export class FooterComponent {
+export class FooterComponent implements OnInit {
+  @ViewChild("mailTo") mailTo!: ElementRef;
+  @ViewChild("telTo") telTo!: ElementRef;
+
   currentYear = new Date().getFullYear();
+  email: string = "info&#64;studiolegaleduffiziscaramella.it";
+  phone: string = "+39 06 9597413";
+  fax: string = "+39 06 87758752"
+
+  ngOnInit(): void {
+
+  }
 }

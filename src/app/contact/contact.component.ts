@@ -4,129 +4,148 @@ import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-contact',
   template: `
-    <section class="py-20">
-      <div class="container mx-auto px-4">
-        <div class="text-center mb-16">
-          <h1 class="text-4xl font-bold text-blue-900 mb-4">Contattaci</h1>
-          <p class="text-blue-800 max-w-2xl mx-auto">
+    <section class="py-5">
+      <div class="container-fluid px-4">
+        <div class="text-center mb-5">
+          <h1 class="fw-bold text-primary mb-3">Contattaci</h1>
+          <p class="text-secondary mx-auto" style="max-width: 600px;">
             Per qualsiasi informazione o richiesta di consulenza, non esitare a contattarci.
             Il nostro team sarà felice di assisterti.
           </p>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <div>
-            <h2 class="text-2xl font-bold text-blue-900 mb-6">Invia un messaggio</h2>
-            <form (ngSubmit)="onSubmit()" #contactForm="ngForm" class="space-y-6">
-              <div>
-                <label for="name" class="block text-blue-900 mb-2">Nome e Cognome</label>
+        <div class="row g-5">
+          <!-- Form -->
+          <div class="col-12 col-lg-6">
+            <h2 class="fs-4 fw-bold text-primary mb-4">Invia un messaggio</h2>
+            <form (ngSubmit)="onSubmit()" #contactForm="ngForm" class="needs-validation" novalidate>
+              <div class="mb-3">
+                <label for="name" class="form-label text-primary">Nome e Cognome</label>
                 <input
                   type="text"
                   id="name"
                   name="name"
                   [(ngModel)]="formData.name"
                   required
-                  class="w-full px-4 py-2 border border-blue-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
+                  class="form-control border-primary"
                 />
               </div>
 
-              <div>
-                <label for="email" class="block text-blue-900 mb-2">Email</label>
+              <div class="mb-3">
+                <label for="email" class="form-label text-primary">Email</label>
                 <input
                   type="email"
                   id="email"
                   name="email"
                   [(ngModel)]="formData.email"
                   required
-                  class="w-full px-4 py-2 border border-blue-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
+                  class="form-control border-primary"
                 />
               </div>
 
-              <div>
-                <label for="message" class="block text-blue-900 mb-2">Messaggio</label>
+              <div class="mb-3">
+                <label for="message" class="form-label text-primary">Messaggio</label>
                 <textarea
                   id="message"
                   name="message"
                   [(ngModel)]="formData.message"
                   rows="5"
                   required
-                  class="w-full px-4 py-2 border border-blue-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
+                  class="form-control border-primary"
                 ></textarea>
               </div>
 
-              <!-- TODO  recaptcha-->
+              <!-- TODO: reCAPTCHA -->
               <button
                 type="submit"
                 [disabled]="!contactForm.form.valid"
-                class="w-full bg-blue-700 text-white hover:bg-blue-800 px-4 py-2 rounded-md disabled:opacity-50">
+                class="btn btn-primary w-100"
+              >
                 Invia Messaggio
               </button>
             </form>
           </div>
 
-          <div>
-            <h2 class="text-2xl font-bold text-blue-900 mb-6">Informazioni di Contatto</h2>
+          <!-- Contatti -->
+          <div class="col-12 col-lg-6">
+            <h2 class="fs-4 fw-bold text-primary mb-4">Informazioni di Contatto</h2>
 
-            <div class="space-y-6">
-              <div class="flex items-start">
-                <div class="bg-blue-100 p-3 rounded-full mr-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-700">
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                    <circle cx="12" cy="10" r="3"/>
-                  </svg>
-                </div>
-                <div>
-                  <h3 class="font-semibold text-blue-900">Indirizzo</h3>
-                  <p class="text-blue-800">Via Roma, 123<br />00100 Roma (RM)</p>
-                </div>
+            <div class="d-flex align-items-start mb-4">
+              <div class="bg-light p-3 rounded-circle me-3 text-primary">
+                <i class="bi bi-geo-alt-fill fs-4"></i>
               </div>
-
-              <div class="flex items-start">
-                <div class="bg-blue-100 p-3 rounded-full mr-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-700">
-                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-                  </svg>
-                </div>
-                <div>
-                  <h3 class="font-semibold text-blue-900">Telefono</h3>
-                  <p class="text-blue-800">+39 06 1234567</p>
-                </div>
-              </div>
-
-              <div class="flex items-start">
-                <div class="bg-blue-100 p-3 rounded-full mr-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-700">
-                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                    <polyline points="22,6 12,13 2,6"/>
-                  </svg>
-                </div>
-                <div>
-                  <h3 class="font-semibold text-blue-900">Email</h3>
-                  <p class="text-blue-800">info&#64;studiolegaleduffiziscaramella.it</p>
-                </div>
-              </div>
-
-              <div class="flex items-start">
-                <div class="bg-blue-100 p-3 rounded-full mr-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-700">
-                    <circle cx="12" cy="12" r="10"/>
-                    <polyline points="12 6 12 12 16 14"/>
-                  </svg>
-                </div>
-                <div>
-                  <h3 class="font-semibold text-blue-900">Orari di Apertura</h3>
-                  <p class="text-blue-800">
-                    Lunedì - Venerdì: 9:00 - 18:00<br />
-                    Sabato: 9:00 - 13:00<br />
-                    Domenica: Chiuso
-                  </p>
-                </div>
+              <div>
+                <h5 class="fw-semibold text-primary mb-1">Indirizzi</h5>
+                <p class="text-secondary mb-1">Viale Parioli, 93/G, 00197 Roma (RM)</p>
+                <hr style="border-top: #1e40af 2px dashed">
+                <p class="text-secondary mb-0">Via Casilina, 243, 00038 Valmontone (RM)</p>
               </div>
             </div>
 
-            <div class="mt-12">
-              <h3 class="text-xl font-bold text-blue-900 mb-4">Dove Siamo</h3>
-              <div class="bg-blue-200 border-2 border-dashed border-blue-300 rounded-xl w-full h-64"></div>
+            <div class="d-flex align-items-start mb-4">
+              <div class="bg-light p-3 rounded-circle me-3 text-primary">
+                <i class="bi bi-telephone-fill fs-4"></i>
+              </div>
+              <div>
+                <h5 class="fw-semibold text-primary mb-1">Telefono</h5>
+                <p class="text-secondary mb-0">+39 06 9597413</p>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-start mb-4">
+              <div class="bg-light p-3 rounded-circle me-3 text-primary">
+                <i class="bi bi-printer-fill fs-4"></i>
+              </div>
+              <div>
+                <h5 class="fw-semibold text-primary mb-1">Fax</h5>
+                <p class="text-secondary mb-0">+39 06 87758752</p>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-start mb-4">
+              <div class="bg-light p-3 rounded-circle me-3 text-primary">
+                <i class="bi bi-envelope-fill fs-4"></i>
+              </div>
+              <div>
+                <h5 class="fw-semibold text-primary mb-1">Email</h5>
+                <p class="text-secondary mb-0">TODO</p>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-start mb-4">
+              <div class="bg-light p-3 rounded-circle me-3 text-primary">
+                <i class="bi bi-clock-fill fs-4"></i>
+              </div>
+              <div>
+                <h5 class="fw-semibold text-primary mb-1">Orari di Apertura</h5>
+                <p class="text-secondary mb-0">
+                  Lunedì - Venerdì: 9:00 - 18:00<br />
+                  Sabato: 9:00 - 13:00<br />
+                  Domenica: Chiuso
+                </p>
+              </div>
+            </div>
+
+
+          </div>
+          <div class="mt-5">
+            <h3 class="fs-5 fw-bold text-primary mb-3">Dove Siamo</h3>
+
+            <div class="row">
+              <div class="col-12 col-md-6">
+                <p class="text-secondary">Viale Parioli, 93/G, 00197 Roma (RM)</p>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5936.6888887486275!2d12.48342137602582!3d41.92844936226031!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f612047f3b241%3A0x946d05a9a1a8d687!2sViale%20Parioli%2C%2093%2C%2000197%20Roma%20RM!5e0!3m2!1sen!2sit!4v1759936890533!5m2!1sen!2sit"
+                  class="w-100" height="450" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+              <div class="col-12 col-md-6">
+                <p class="text-secondary">Via Casilina, 243, 00038 Valmontone (RM)</p>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d627.3094865970627!2d12.921184351286703!3d41.77487115405784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13257c49ee836ecb%3A0xddb3b61b5d7cf91e!2sVia%20Casilina%2C%20243%2C%2000038%20Valmontone%20RM!5e0!3m2!1sen!2sit!4v1759936817353!5m2!1sen!2sit"
+                  class="w-100" height="450" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
             </div>
           </div>
         </div>

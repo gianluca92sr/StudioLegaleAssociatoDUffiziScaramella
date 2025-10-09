@@ -52,7 +52,7 @@ import { Component } from '@angular/core';
         </div>
 
         <div class="text-center mt-12">
-          <button class="bg-blue-700 text-white hover:bg-blue-800 px-6 py-3 rounded-md">
+          <button class="bg-blue-800 text-white hover:bg-blue-800 px-6 py-3 rounded-md">
             Vedi tutte le news
           </button>
         </div>

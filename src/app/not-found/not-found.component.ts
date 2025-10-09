@@ -20,14 +20,14 @@ import {Router, RouterLink} from '@angular/router';
         <div class="flex flex-col sm:flex-row justify-center gap-4">
           <button
             (click)="goHome()"
-            class="bg-blue-700 text-white px-6 py-3 rounded-md hover:bg-blue-200 transition-colors font-medium"
+            class="bg-blue-800 text-white px-6 py-3 rounded-md hover:bg-blue-200 transition-colors font-medium"
           >
             Torna alla Home
           </button>
 
           <button
             (click)="goBack()"
-            class="px-6 py-3 border border-blue-700 text-blue-700 rounded-md hover:bg-blue-700 hover:text-white transition-colors font-medium"
+            class="px-6 py-3 border border-blue-700 text-blue-700 rounded-md hover:bg-blue-800 hover:text-white transition-colors font-medium"
           >
             Torna Indietro
           </button>

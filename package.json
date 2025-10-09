@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "github-build": "ng build --configuration production --base-href 'https://gianluca92sr.github.io/StudioLegaleAssociatoDUffiziScaramella/'"
+    "github-build": "ng build --configuration production --base-href /StudioLegaleAssociatoDUffiziScaramella/",
+    "github-deploy": "npx angular-cli-ghpages --dir=dist/studio-legale-duffizi-scaramella/browser --no-silent"
   },
   "private": true,
   "dependencies": {
@@ -18,11 +19,9 @@
     "@angular/platform-browser": "^19.2.0",
     "@angular/platform-browser-dynamic": "^19.2.0",
     "@angular/router": "^19.2.0",
-    "@tailwindcss/postcss": "^4.1.14",
     "bootstrap": "^5.3.8",
-    "postcss": "^8.5.6",
+    "bootstrap-icons": "^1.13.1",
     "rxjs": "~7.8.0",
-    "tailwindcss": "^4.1.14",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
   },

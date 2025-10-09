@@ -19,7 +19,7 @@ import { Component } from '@angular/core';
               <div class="flex flex-col items-center text-center mb-6">
                 <div class="bg-gray-200 border-2 border-dashed rounded-xl w-32 h-32 mb-4"></div>
                 <h3 class="text-xl font-bold text-foreground">Avv. Alessandro D’Uffizi</h3>
-                <p class="text-primary font-medium">Socio Fondatore</p>
+                <p class="font-medium">Socio Fondatore</p>
               </div>
 
               <div class="mb-6">
@@ -35,8 +35,8 @@ import { Component } from '@angular/core';
                 e tributario, rappresentando clienti nazionali e internazionali in complessi procedimenti giudiziari.
               </p>
 
-              <button class="w-full border border-primary text-primary hover:bg-primary hover:text-primary-foreground px-4 py-2 rounded-md transition-colors">
-                Contatta D'Uffizi
+              <button class="bg-blue-800 text-white w-full border border-primary text-primary hover:bg-primary hover:text-primary-foreground px-4 py-2 rounded-md transition-colors">
+                Contatta Avv. D'Uffizi
               </button>
             </div>
           </div>
@@ -63,8 +63,8 @@ import { Component } from '@angular/core';
                 enti pubblici e privati su questioni contrattuali e normative.
               </p>
 
-              <button class="w-full border border-primary text-primary hover:bg-primary hover:text-primary-foreground px-4 py-2 rounded-md transition-colors">
-                Contatta Scaramella
+              <button class="bg-blue-800 text-white w-full border border-primary text-primary hover:bg-primary hover:text-primary-foreground px-4 py-2 rounded-md transition-colors">
+                Contatta Avv. Scaramella
               </button>
             </div>
           </div>
