@@ -1,3 +1,4 @@
 recaptcha
 cookies
 privacy ecc
+SSR + SEO

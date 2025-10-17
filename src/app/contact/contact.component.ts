@@ -1,5 +1,9 @@
-import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import {Component, ElementRef, Inject, OnInit, ViewChild} from '@angular/core';
+import {FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators} from '@angular/forms';
+import {ModalComponent} from '../core/modal/modal.component';
+import {RECAPTCHA_V3_SITE_KEY, RecaptchaFormsModule, RecaptchaModule} from 'ng-recaptcha-2';
+// import {RECAPTCHA_SITE_KEY_V2} from '../app.config';
+declare var bootstrap: any;
 
 @Component({
   selector: 'app-contact',
@@ -18,17 +22,23 @@ import { FormsModule } from '@angular/forms';
           <!-- Form -->
           <div class="col-12 col-lg-6">
             <h2 class="fs-4 fw-bold text-primary mb-4">Invia un messaggio</h2>
-            <form (ngSubmit)="onSubmit()" #contactForm="ngForm" class="needs-validation" novalidate>
+            <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
               <div class="mb-3">
                 <label for="name" class="form-label text-primary">Nome e Cognome</label>
                 <input
                   type="text"
                   id="name"
                   name="name"
-                  [(ngModel)]="formData.name"
-                  required
+                  formControlName="name"
                   class="form-control border-primary"
                 />
+                @if (contactForm.get("name")?.dirty) {
+                  @if (contactForm.get("name")?.errors?.['required']) {
+                    <div class="text-danger">
+                      Obbligatorio
+                    </div>
+                  }
+                }
               </div>
 
               <div class="mb-3">
@@ -37,10 +47,20 @@ import { FormsModule } from '@angular/forms';
                   type="email"
                   id="email"
                   name="email"
-                  [(ngModel)]="formData.email"
-                  required
+                  formControlName="email"
                   class="form-control border-primary"
                 />
+                @if (contactForm.get("email")?.dirty) {
+                  @if (contactForm.get("email")?.errors?.['required']) {
+                    <div class="text-danger">
+                      Obbligatorio
+                    </div>
+                  } @else if (contactForm.get("email")?.errors?.['email']) {
+                    <div class="text-danger">
+                      Email non valida
+                    </div>
+                  }
+                }
               </div>
 
               <div class="mb-3">
@@ -48,18 +68,31 @@ import { FormsModule } from '@angular/forms';
                 <textarea
                   id="message"
                   name="message"
-                  [(ngModel)]="formData.message"
                   rows="5"
-                  required
+                  formControlName="message"
                   class="form-control border-primary"
                 ></textarea>
+                @if (contactForm.get("message")?.dirty) {
+                  @if (contactForm.get("message")?.errors?.['required']) {
+                    <div class="text-danger">
+                      Obbligatorio
+                    </div>
+                  }
+                }
               </div>
 
-              <!-- TODO: reCAPTCHA -->
+<!--              <re-captcha formControlName="recaptcha"-->
+<!--                          siteKey="siteKey"-->
+<!--                          (resolved)="resolved($event)"-->
+<!--              ></re-captcha>-->
+              <re-captcha formControlName="recaptcha"
+                          (resolved)="resolved($event)"
+              ></re-captcha>
+
               <button
                 type="submit"
-                [disabled]="!contactForm.form.valid"
-                class="btn btn-primary w-100"
+                [disabled]="!contactForm.valid"
+                class="btn btn-primary w-100 mt-3"
               >
                 Invia Messaggio
               </button>
@@ -119,8 +152,8 @@ import { FormsModule } from '@angular/forms';
               <div>
                 <h5 class="fw-semibold text-primary mb-1">Orari di Apertura</h5>
                 <p class="text-secondary mb-0">
-                  Lunedì - Venerdì: 9:00 - 18:00<br />
-                  Sabato: 9:00 - 13:00<br />
+                  Lunedì - Venerdì: 9:00 - 18:00<br/>
+                  Sabato: 9:00 - 13:00<br/>
                   Domenica: Chiuso
                 </p>
               </div>
@@ -151,19 +184,50 @@ import { FormsModule } from '@angular/forms';
         </div>
       </div>
     </section>
+
+    <app-modal [modalTitle]="'Grazie!'" [modalBtnCloseText]="'Chiudi'">
+      <div #divModalBody></div>
+    </app-modal>
+
   `,
   standalone: true,
-  imports: [FormsModule]
+  imports: [FormsModule, ReactiveFormsModule, ModalComponent, RecaptchaModule, RecaptchaFormsModule]
 })
-export class ContactComponent {
-  formData = {
-    name: '',
-    email: '',
-    message: ''
-  };
+export class ContactComponent implements OnInit {
+
+  @ViewChild('divModalBody') divModalBody!: ElementRef;
+  contactForm!: FormGroup;
+  descToDisplay = 'Grazie per averci contattato! Ti risponderemo al più presto.'
+
+  constructor(private fb: FormBuilder,
+              // @Inject(RECAPTCHA_SITE_KEY_V2) public siteKey: string
+              // @Inject(RECAPTCHA_V3_SITE_KEY) public siteKey: string
+  ) {
+  }
+
+  ngOnInit(): void {
+    this.contactForm = this.fb.group({
+      name: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      message: ['', Validators.required],
+      recaptcha: ['', Validators.required],
+    })
+  }
 
   onSubmit() {
-    alert('Grazie per averci contattato! Ti risponderemo al più presto.');
-    this.formData = { name: '', email: '', message: '' };
+    this.openModal()
+    console.log(this.contactForm.value);
+    // this.formData = { name: '', email: '', message: '' };
   }
+
+  openModal() {
+    const modalOfService = new bootstrap.Modal(document.getElementById('modalService'));
+    this.divModalBody.nativeElement.innerHTML = `<p>${this.descToDisplay}</p>`;
+    modalOfService.toggle();
+  }
+
+  resolved(captchaResponse: string | null) {
+    console.log(`Resolved captcha with response: ${captchaResponse}`);
+  }
+
 }
