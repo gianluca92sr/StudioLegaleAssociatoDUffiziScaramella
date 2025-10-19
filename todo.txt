@@ -1,6 +1,7 @@
 recaptcha + servizio per mandare mail
 cookies privacy ecc
 SSR + SEO
+le icone di services sono lente a caricare
 PER seo:
 Title & Meta Description per la home
 
