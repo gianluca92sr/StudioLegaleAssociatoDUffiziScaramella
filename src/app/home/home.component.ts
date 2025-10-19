@@ -99,8 +99,8 @@ import {RouterLink} from '@angular/router';
       <!-- About Section -->
       <section class="py-5">
         <div class="container-fluid px-4">
-          <div class="d-flex flex-column flex-md-row align-items-center gap-2">
-            <div class="col-12 col-md-6 col-lg-8 pe-0 pe-md-3 ">
+          <div class="d-flex flex-column flex-lg-row gap-4 me-4">
+            <div class="col-12 col-lg-6 col-xxl-8 pe-0 pe-md-3 ">
               <h2 class="h2 fw-bold text-primary mb-3">Chi Siamo</h2>
               <p class="text-secondary mb-3" style="text-align: justify">
                 Lo Studio Legale Associato D'Uffizi & Scaramella nasce dall'esperienza pluriennale
@@ -124,7 +124,7 @@ import {RouterLink} from '@angular/router';
                 </div>
               </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-4 mt-3 mt-md-0 bg-primary-light border border-dashed border-secondary rounded">
+            <div class="col-12 col-lg-6 col-xxl-4 mt-3 mt-md-0 bg-primary-light border border-dashed border-secondary rounded">
               <img style="width: 100%;" src="studioExample.jpg" alt="studioExample">
             </div>
           </div>
