@@ -127,7 +127,7 @@ import {RouterLink} from '@angular/router';
               </div>
             </div>
             <div class="col-md-6 mt-3 mt-md-0 bg-primary-light border border-dashed border-secondary rounded">
-              <img style="width: 100%;" src="/studioExample.jpg" alt="studioExample">
+              <img style="width: 100%;" src="studioExample.jpg" alt="studioExample">
             </div>
           </div>
         </div>

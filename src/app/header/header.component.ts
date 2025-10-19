@@ -9,7 +9,7 @@ import {NgClass, NgIf} from '@angular/common';
       <div class="container-fluid py-1">
         <div class="d-flex align-items-center justify-content-between">
           <div class="d-flex align-items-center gap-2">
-            <img width="100px" src="/logoBlue.png" alt="logoBlue">
+            <img width="100px" src="logoBlue.png" alt="logoBlue">
             <h1 class="fs-5 fw-bold text-primary mb-0 lh-sm d-none d-lg-block">
               Studio Legale Associato<br />D'Uffizi & Scaramella
             </h1>

@@ -10,7 +10,7 @@ import {TrimPipe} from '../core/pipe/trim.pipe';
         <div class="row">
           <div class="col-12">
             <!--            <div class="d-flex gap-2 align-items-center mb-3">-->
-            <img width="200px" src="/logoWhite.png" alt="logoWhite">
+            <img width="200px" src="logoWhite.png" alt="logoWhite">
             <!--            </div>-->
           </div>
         </div>
