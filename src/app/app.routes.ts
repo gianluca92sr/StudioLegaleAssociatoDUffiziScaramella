@@ -11,7 +11,7 @@ export const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'avvocati', component: LawyersComponent },
   { path: 'servizi', component: ServicesComponent },
-  { path: 'blog', component: BlogComponent },
+  // { path: 'blog', component: BlogComponent },
   { path: 'contatti', component: ContactComponent },
   { path: '**', component: NotFoundComponent }
 ];

@@ -92,7 +92,7 @@ export class FooterComponent implements OnInit {
   @ViewChild("telTo") telTo!: ElementRef;
 
   currentYear = new Date().getFullYear();
-  email: string = "info&#64;studiolegaleduffiziscaramella.it";
+  email: string = "segreteria@duffiziscaramella.it";
   phone: string = "+39 06 9597413";
   fax: string = "+39 06 87758752"
 

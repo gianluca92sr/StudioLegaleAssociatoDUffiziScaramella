@@ -16,7 +16,7 @@ import { Component } from '@angular/core';
         <div class="row g-4">
           <div class="col-12 col-md-6">
             <div class="border border-primary-subtle shadow-sm hover-shadow-lg transition rounded bg-white h-100">
-            <div class="p-4">
+            <div class="p-4 h-100 d-flex flex-column justify-content-between">
               <div class="d-flex align-items-start">
                 <div class="me-3 p-3 bg-primary-subtle rounded-circle"></div>
                 <div>
@@ -53,7 +53,7 @@ import { Component } from '@angular/core';
 
           <div class="col-12 col-md-6">
             <div class="border border-primary-subtle shadow-sm hover-shadow-lg transition rounded bg-white h-100">
-              <div class="p-4">
+              <div class="p-4 h-100 d-flex flex-column justify-content-between">
                 <div class="d-flex align-items-start">
                   <div class="me-3 p-3 bg-primary-subtle rounded-circle"></div>
                   <div>

@@ -141,7 +141,7 @@ declare var bootstrap: any;
               </div>
               <div>
                 <h5 class="fw-semibold text-primary mb-1">Email</h5>
-                <p class="text-secondary mb-0">TODO</p>
+                <p class="text-secondary mb-0">segreteria&#64;duffiziscaramella.it</p>
               </div>
             </div>
 
@@ -200,8 +200,6 @@ export class ContactComponent implements OnInit {
   descToDisplay = 'Grazie per averci contattato! Ti risponderemo al più presto.'
 
   constructor(private fb: FormBuilder,
-              // @Inject(RECAPTCHA_SITE_KEY_V2) public siteKey: string
-              // @Inject(RECAPTCHA_V3_SITE_KEY) public siteKey: string
   ) {
   }
 
