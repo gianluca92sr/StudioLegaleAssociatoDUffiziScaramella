@@ -100,15 +100,13 @@ import {RouterLink} from '@angular/router';
       <section class="py-5">
         <div class="container-fluid px-4">
           <div class="d-flex flex-column flex-md-row align-items-center gap-2">
-            <div class="col-md-6 pe-0 pe-md-3 ">
+            <div class="col-12 col-md-6 col-lg-8 pe-0 pe-md-3 ">
               <h2 class="h2 fw-bold text-primary mb-3">Chi Siamo</h2>
               <p class="text-secondary mb-3" style="text-align: justify">
                 Lo Studio Legale Associato D'Uffizi & Scaramella nasce dall'esperienza pluriennale
                 di due professionisti del diritto che condividono una visione comune: fornire
-                consulenza legale di alta qualità con un approccio personalizzato.
-              </p>
-              <p class="text-secondary mb-3" style="text-align: justify">
-                La nostra missione è quella di offrire soluzioni legali efficaci e innovative,
+                consulenza legale di alta qualità con un approccio personalizzato. La nostra missione è quella di
+                offrire soluzioni legali efficaci e innovative,
                 mantenendo sempre il massimo rispetto per l'etica professionale e l'interesse del cliente.
               </p>
               <div class="d-flex flex-wrap gap-2">
@@ -126,7 +124,7 @@ import {RouterLink} from '@angular/router';
                 </div>
               </div>
             </div>
-            <div class="col-md-6 mt-3 mt-md-0 bg-primary-light border border-dashed border-secondary rounded">
+            <div class="col-12 col-md-6 col-lg-4 mt-3 mt-md-0 bg-primary-light border border-dashed border-secondary rounded">
               <img style="width: 100%;" src="studioExample.jpg" alt="studioExample">
             </div>
           </div>
