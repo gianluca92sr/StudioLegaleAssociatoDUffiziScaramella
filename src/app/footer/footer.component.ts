@@ -64,12 +64,12 @@ import {TrimPipe} from '../core/pipe/trim.pipe';
           <div class="col-12">
             <div class="d-flex gap-2">
               <a href='mailto:{{email}}' #mailTo title="Invia Email">
-                <button class="btn btn-outline-light p-2">
+                <button class="btn btn-outline-light p-2" aria-label="Invia Email">
                   <i class="bi bi-envelope"></i>
                 </button>
               </a>
               <a href="tel:{{phone | trim}}" #telTo title="Chiama">
-                <button class="btn btn-outline-light p-2">
+                <button class="btn btn-outline-light p-2" aria-label="Chiama">
                   <i class="bi bi-telephone"></i>
                 </button>
               </a>
