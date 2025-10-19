@@ -1,4 +1,3 @@
-recaptcha
-cookies
-privacy ecc
+recaptcha + servizio per mandare mail
+cookies privacy ecc
 SSR + SEO

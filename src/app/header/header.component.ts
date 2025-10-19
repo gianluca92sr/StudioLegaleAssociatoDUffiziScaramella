@@ -98,15 +98,6 @@ import {NgClass, NgIf} from '@angular/common';
             <span>Servizi</span>
           </a>
 
-          <a routerLink="/blog"
-             routerLinkActive="bg-primary text-white"
-             class="d-flex align-items-center gap-1 px-3 py-2 rounded text-decoration-none"
-             [ngClass]="isActive('/blog') ? 'bg-primary text-white' : 'text-primary'"
-             (click)="closeMenu()">
-            <i class="bi bi-journal-text"></i>
-            <span>News</span>
-          </a>
-
           <a routerLink="/contatti"
              routerLinkActive="bg-primary text-white"
              class="d-flex align-items-center gap-1 px-3 py-2 rounded text-decoration-none"

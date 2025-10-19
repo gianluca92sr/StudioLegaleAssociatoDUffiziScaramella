@@ -225,7 +225,7 @@ declare var bootstrap: any;
       </div>
     </section>
 
-    <app-modal [modalTitle]="'Dettaglio Servizio'" [modalBtnCloseText]="'Chiudi'">
+    <app-modal [modalTitle]="modalTitle" [modalBtnCloseText]="'Chiudi'">
       <div #divModalBody></div>
     </app-modal>
 
@@ -238,11 +238,13 @@ declare var bootstrap: any;
 export class ServicesComponent {
   protected readonly LawEnum = LawEnum;
   @ViewChild('divModalBody') divModalBody!: ElementRef;
+  modalTitle = '';
 
   openModal(lawType: LawEnum) {
-    let descToDisplay = this.servicesDetail.aree_legali.find(x => x.nome === lawType)?.descrizione;
+    let service = this.servicesDetail.aree_legali.find(x => x.nome === lawType);
     const modalOfService = new bootstrap.Modal(document.getElementById('modalService'));
-    this.divModalBody.nativeElement.innerHTML = `<p>${descToDisplay}</p>`;
+    this.modalTitle = service?.titolo ?? 'Servizio';
+    this.divModalBody.nativeElement.innerHTML = `<p>${service?.descrizione}</p>`;
     modalOfService.toggle();
   }
 
@@ -250,38 +252,47 @@ export class ServicesComponent {
     "aree_legali": [
       {
         "nome": LawEnum.SOCIETARIO,
+        "titolo": "Diritto Societario",
         "descrizione": "Offriamo consulenza legale strategica per l'intero ciclo di vita dell'impresa. Assistiamo i clienti nella costituzione di società, nella redazione di statuti e patti parasociali, e li guidiamo con esperienza nelle operazioni straordinarie (fusioni, acquisizioni, scissioni e trasformazioni). Il nostro supporto si estende alla compliance aziendale, alla governance e alla gestione delle crisi societarie, garantendo sempre la massima tutela degli interessi di soci e amministratori."
       },
       {
         "nome": LawEnum.LAVORO,
+        "titolo": "Diritto del Lavoro",
         "descrizione": "Forniamo assistenza completa e bilanciata sia a datori di lavoro che a dipendenti. La nostra attività include la redazione e l'analisi di contratti di lavoro (subordinato, autonomo, dirigenziale), la gestione delle procedure disciplinari, dei licenziamenti individuali e collettivi. Ci occupiamo anche di contenziosi e vertenze in materia di differenze retributive, mobbing, infortuni sul lavoro e tutele previdenziali, mirando sempre a soluzioni eque e conformi alle normative vigenti."
       },
       {
         "nome": LawEnum.COMMERCIALE,
+        "titolo": "Diritto Commerciale",
         "descrizione": "Siamo specializzati nella tutela e nello sviluppo del business a livello nazionale e internazionale. Assistiamo le aziende nella negoziazione e stesura di contratti commerciali complessi (agenzia, distribuzione, franchising, appalto, fornitura) e gestiamo con prontezza le pratiche di recupero crediti in via stragiudiziale e giudiziale. Offriamo inoltre consulenza in materia di proprietà industriale, concorrenza sleale e diritto dei consumatori, proteggendo il tuo patrimonio commerciale."
       },
       {
         "nome": LawEnum.CIVILE,
+        "titolo": "Diritto Civile",
         "descrizione": "Il Diritto Civile è il cuore della nostra attività, coprendo tutti gli aspetti della vita privata. Forniamo assistenza legale in materia di Diritto di Famiglia (separazioni, divorzi, affidamento), Diritto Successorio (testamenti, divisioni ereditarie), e tuteliamo i clienti in casi di responsabilità contrattuale ed extracontrattuale (risarcimento danni, sinistri stradali). Il nostro approccio è meticoloso e mirato alla risoluzione rapida ed efficace delle controversie personali e patrimoniali."
       },
       {
         "nome": LawEnum.IMMOBILIARE,
+        "titolo": "Diritto Immobiliare",
         "descrizione": "Assistiamo privati e imprese in tutte le operazioni immobiliari. La nostra consulenza copre la negoziazione e stesura di contratti di compravendita, preliminari e locazione (abitativa e commerciale). Ci occupiamo anche di sfratti, questioni condominiali complesse, servitù e gestione legale del patrimonio immobiliare, garantendo sicurezza e conformità normativa in ogni transazione e disputa relativa alla proprietà."
       },
       {
         "nome": LawEnum.CONTENZIOSO,
+        "titolo": "Contenzioso Civile",
         "descrizione": "Rappresentiamo i nostri clienti in ogni fase del contenzioso avanti a Giudici di Pace, Tribunali, Corti d'Appello e Corte di Cassazione. Agiamo con una strategia processuale rigorosa e mirata, curando l'istruttoria, l'analisi delle prove e la stesura degli atti difensivi. Il nostro obiettivo è massimizzare le possibilità di successo, assistendoti con determinazione nel recupero crediti, nella difesa da pretese altrui e in ogni lite che richieda la tutela giurisdizionale."
       },
       {
         "nome": LawEnum.TRIBUTARIO,
+        "titolo": "Diritto Tributario",
         "descrizione": "Offriamo consulenza e assistenza legale per la prevenzione e la risoluzione del contenzioso fiscale. Interveniamo tempestivamente in caso di verifiche fiscali, avvisi di accertamento, cartelle esattoriali e sanzioni. Rappresentiamo i clienti davanti alle Commissioni Tributarie Provinciali e Regionali, lavorando per annullare o ridurre il carico impositivo e per garantire la corretta interpretazione e applicazione delle norme tributarie."
       },
       {
         "nome": LawEnum.PENALE,
+        "titolo": "Diritto Penale",
         "descrizione": "Garantiamo una difesa tecnica qualificata in ogni tipo di procedimento penale, sia come difensori dell'imputato che come legali di parte offesa (costituzione di parte civile). La nostra competenza spazia dai reati contro la persona e il patrimonio, ai reati societari e fallimentari. Offriamo un'assistenza costante, discreta e meticolosa, dalla fase delle indagini preliminari fino al dibattimento, con l'obiettivo primario di tutelare la libertà e l'onorabilità del cliente."
       },
       {
         "nome": LawEnum.MEDIAZIONE,
+        "titolo": "Mediazione Civile",
         "descrizione": "Promuoviamo attivamente la risoluzione alternativa delle liti, assistendo i clienti nel procedimento obbligatorio e volontario di mediazione. Crediamo che la mediazione sia uno strumento fondamentale per raggiungere accordi rapidi, riservati ed economicamente vantaggiosi. Ti guidiamo nel dialogo con la controparte per trovare un punto d'incontro e definire una soluzione negoziale vincolante, evitando i lunghi e costosi tempi di un processo."
       }
     ]
