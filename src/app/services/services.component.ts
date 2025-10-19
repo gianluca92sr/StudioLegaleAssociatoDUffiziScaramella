@@ -244,7 +244,7 @@ export class ServicesComponent {
     let service = this.servicesDetail.aree_legali.find(x => x.nome === lawType);
     const modalOfService = new bootstrap.Modal(document.getElementById('modalService'));
     this.modalTitle = service?.titolo ?? 'Servizio';
-    this.divModalBody.nativeElement.innerHTML = `<p>${service?.descrizione}</p>`;
+    this.divModalBody.nativeElement.innerHTML = `<p style="text-align: justify;">${service?.descrizione}</p>`;
     modalOfService.toggle();
   }
 

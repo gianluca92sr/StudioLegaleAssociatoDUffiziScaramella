@@ -1,3 +1,95 @@
 recaptcha + servizio per mandare mail
 cookies privacy ecc
 SSR + SEO
+PER seo:
+Title & Meta Description per la home
+
+<title>Studio Legale Associato D’Uffizi & Scaramella – Avvocati a Roma | Civile, Penale, Tributario</title>
+<meta name="description" content="Studio Legale Associato D’Uffizi & Scaramella: competenza in diritto civile, penale, tributario e consulenza legale a Roma. Contattaci per una consulenza.">
+
+
+Il title è breve (≤ ~60 caratteri) ma descrittivo.
+
+La description (~150-160 caratteri) che spiega “cosa fai” mette le parole chiave rilevanti.
+
+Intestazioni (Heading) appropriate
+
+Nella homepage avrai <h1>Studio Legale Associato D’Uffizi & Scaramella</h1>.
+
+Le sezioni “Competenze” possono avere <h2>Competenze”, sotto <h3>Diritto Civile</h3> etc.
+
+Dati strutturati (JSON-LD)
+Nel <head> puoi aggiungere uno script simile a:
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  "name": "Studio Legale Associato D’Uffizi & Scaramella",
+  "url": "https://gianluca92sr.github.io/StudioLegaleAssociatoDUffiziScaramella/",
+  "logo": "https://tuosito/logo.png",
+  "description": "Studio legale a Roma con competenze in diritto civile, penale, tributario.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Via … (indirizzo completo)",
+    "addressLocality": "Roma",
+    "postalCode": "00197",
+    "addressRegion": "RM",
+    "addressCountry": "IT"
+  },
+  "telephone": "+39 …",
+  "email": "info@…",
+  "openingHours": "Mo-Fr 09:00-18:00"
+}
+</script>
+
+
+Questo aiuta Google a mostrare informazioni ricche (indirizzo, telefono, tipo attività).
+
+Sitemap e robots.txt
+
+Crea sitemap.xml che elenchi le pagine /, /servizi, /contatti, /articoli (se ce ne sono).
+
+Metti un robots.txt che consenta l’accesso e punti alla sitemap:
+
+User-agent: *
+Allow: /
+Sitemap: https://gianluca92sr.github.io/StudioLegaleAssociatoDUffiziScaramella/sitemap.xml
+
+
+Ottimizzazione immagini
+
+Se ci sono immagini (foto dello studio, foto dei professionisti), ridimensionali, comprimi e usa alt descrittivi come alt="Avvocati D'Uffizi & Scaramella Roma".
+
+Mobile / Responsive / Performance
+
+Verifica con PageSpeed Insights / Lighthouse. Se qualcosa è lento, ottimizza.
+
+Usa lazy loading delle immagini (loading="lazy").
+
+Minimizza CSS / JS inutili, rimuovi librerie che non usi.
+
+Contenuti utili
+
+Aggiungi una sezione “News / articoli” dove scrivi commenti su cambiamenti normativi, guide legali, casi studio.
+
+In ogni articolo, metti una breve descrizione, data, autore, e collegamenti interni a pagine di servizio.
+
+Backlink / presenza esterna
+
+Chiedi a directory legali (avvocati.it, studi legali locali, associazioni giuridiche) di inserire il tuo sito.
+
+Collabora con blog giuridici e chiedi citazioni.
+
+Canonical e versioni corrette
+
+Se servito da GitHub Pages, assicurati che le versioni con/senza www e eventuali alias abbiano canonical appropriato:
+
+<link rel="canonical" href="https://gianluca92sr.github.io/StudioLegaleAssociatoDUffiziScaramella/">
+
+
+Testare con strumenti SEO
+
+Usa strumenti come Google Search Console (anche se su GitHub Pages la verifica potrebbe essere un po’ più “manuale”).
+
+Lighthouse audit SEO / accessibility / performance.
