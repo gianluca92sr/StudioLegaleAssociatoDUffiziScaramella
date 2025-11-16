@@ -221,7 +221,7 @@ declare var bootstrap: any;
               <div class="p-4">
                 <div class="d-flex align-items-start">
                   <div class="me-3 p-3 bg-primary-subtle rounded-circle">
-                    <span class="material-symbols-outlined">balance</span>
+                    <span class="material-symbols-outlined">tactic</span>
                   </div>
                   <div>
                     <h3 class="h5 fw-bold text-primary">Progettazione Bandi Nazionali ed Europei</h3>
@@ -244,7 +244,7 @@ declare var bootstrap: any;
               <div class="p-4">
                 <div class="d-flex align-items-start">
                   <div class="me-3 p-3 bg-primary-subtle rounded-circle">
-                    <span class="material-symbols-outlined">balance</span>
+                    <span class="material-symbols-outlined">clinical_notes</span>
                   </div>
                   <div>
                     <h3 class="h5 fw-bold text-primary">Consulenza Legale Continuativa</h3>
