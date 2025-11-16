@@ -1,5 +1,5 @@
 import {ApplicationConfig, provideZoneChangeDetection} from '@angular/core';
-import {provideRouter, withInMemoryScrolling} from '@angular/router';
+import {provideRouter, withInMemoryScrolling, withViewTransitions} from '@angular/router';
 
 import {routes} from './app.routes';
 import {RECAPTCHA_SETTINGS, RecaptchaSettings} from 'ng-recaptcha-2';
@@ -10,7 +10,13 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes,
       withInMemoryScrolling({
         scrollPositionRestoration: 'enabled',
-      })),
+      }),
+      withViewTransitions(
+        {
+          skipInitialTransition: true,
+        }
+      )
+    ),
     {
       provide: RECAPTCHA_SETTINGS,
       useValue: {
