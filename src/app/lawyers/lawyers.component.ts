@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import {RouterLink} from '@angular/router';
 
 @Component({
   selector: 'app-lawyers',
@@ -25,7 +24,16 @@ import {RouterLink} from '@angular/router';
                     <p class="text-secondary">Socio Fondatore</p>
                   </div>
                 </div>
-
+                <div class="d-flex text-primary">
+                  <ul>
+                    <li>
+                      Patrocinatore dinanzi alle Magistrature Superiori
+                    </li>
+                    <li>
+                      Master II Livello in Criminologia – Università La Sapienza di Roma
+                    </li>
+                  </ul>
+                </div>
                 <div>
                   <h4 class="text-primary mb-2">Aree di competenza:</h4>
                   <div class="d-flex text-primary">
@@ -34,20 +42,22 @@ import {RouterLink} from '@angular/router';
                         Diritto Penale
                       </li>
                       <li>
-                        Diritto Tributario
+                        Diritto Civile
+                      </li>
+                      <li>
+                        Diritto del Lavoro
+                      </li>
+                      <li>
+                        Diritto Commerciale
                       </li>
                     </ul>
                   </div>
                 </div>
 
                 <p class="text-secondary mb-4">
-                  Con oltre 20 anni di esperienza nel settore legale, Alessandro si specializza in diritto penale
-                  e tributario, rappresentando clienti nazionali e internazionali in complessi procedimenti giudiziari.
+                  Con oltre 25 anni di esperienza nel settore legale, Alessandro ha rappresentato clienti, nazionali e internazionali, in complessi procedimenti giudiziari, assistito imprese e privati dinanzi a Tribunali, Corti di Appello e Suprema Corte di Cassazione.
                 </p>
 
-<!--                <button class="btn btn-primary" (click)="vaiAiContatti(1)">-->
-<!--                  Contatta Avv. D'Uffizi-->
-<!--                </button>-->
               </div>
             </div>
           </div>
@@ -62,27 +72,38 @@ import {RouterLink} from '@angular/router';
                     <p class="text-secondary">Socio Fondatore</p>
                   </div>
                 </div>
-
+                <div class="d-flex text-primary">
+                  <ul>
+                    <li>
+                      Master di II Livello in diritto Tributario  – Università Tor Vergata di Roma (2016)
+                    </li>
+                    <li>
+                      Master IPSOA "Esperto bandi europei: fondo perduto e altri meccanismi finanziari del PNNE" (2023)
+                    </li>
+                  </ul>
+                </div>
                 <div>
                   <h4 class="text-primary mb-2">Aree di competenza:</h4>
                   <div class="d-flex text-primary">
                     <ul>
                       <li>
-                        Diritto Civile
+                        Diritto Civile, Commerciale e Societario
                       </li>
                       <li>
-                        Diritto Commerciale
+                        Diritto Immobiliare
                       </li>
                       <li>
                         Diritto Tributario
+                      </li>
+                      <li>
+                        Diritto Penale Tributario
                       </li>
                     </ul>
                   </div>
                 </div>
 
                 <p class="text-secondary mb-4">
-                  Fabrizio è esperto in diritto civile, commerciale e tributario, fornendo consulenza a grandi aziende,
-                  enti pubblici e privati su questioni contrattuali e normative.
+                  Fabrizio ha maturato una consolidata esperienza nelle branche del diritto collegate al mondo dell’impresa e del business. Ha assistito imprese, nazionali e non, su operazioni ordinarie e straordinarie, e con riferimento a problematiche contrattuali e normative.
                 </p>
 
 <!--                <button class="btn btn-primary" (click)="vaiAiContatti(2)">-->
@@ -100,19 +121,5 @@ import {RouterLink} from '@angular/router';
   standalone: true
 })
 export class LawyersComponent {
-
-  lawyers = [
-    {
-      id: 1,
-      Cognome: "D'Uffizi"
-    },
-    {
-      id: 2,
-      Cognome: "Scaramella"
-    }
-  ]
-
-  vaiAiContatti(lawyerId: number) {
-  }
 
 }

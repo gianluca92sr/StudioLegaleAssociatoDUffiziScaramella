@@ -16,6 +16,6 @@ export const appConfig: ApplicationConfig = {
       useValue: {
         siteKey: '6LcdH-4rAAAAALPkrAgBQOJKTCQWxHWNpp8361RF',
       } as RecaptchaSettings,
-    }
+    },
   ],
 };
