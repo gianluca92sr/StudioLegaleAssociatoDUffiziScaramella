@@ -78,7 +78,7 @@ import { Component } from '@angular/core';
                       Master di II Livello in diritto Tributario  – Università Tor Vergata di Roma (2016)
                     </li>
                     <li>
-                      Master IPSOA "Esperto bandi europei: fondo perduto e altri meccanismi finanziari del PNNE" (2023)
+                      Master IPSOA "Esperto bandi europei: fondo perduto e altri meccanismi finanziari del PNRR" (2023)
                     </li>
                   </ul>
                 </div>

@@ -1,5 +1,29 @@
 // Cambio colore blue di bootstrap
-//$blue:    #1e40af;
-$blue: #023a85;
+$blue: #0b5567;
+$blue-lighter: #0e6d83;
+$blue-light: #128daa;
+$blue-medium: #16add1;
+
+// Varianti più scure
+$blue-dark: #083d48;
+$blue-darker: #062d35;
+
+$primary: $blue;
+
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+
+$custom-colors: (
+  "blue-lighter": $blue-lighter,
+  "blue-light": $blue-light,
+  "blue-medium": $blue-medium,
+  "blue-dark": $blue-dark,
+  "blue-darker": $blue-darker
+);
+
+// Unisce i colori personalizzati con quelli di Bootstrap
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
 @import "bootstrap/scss/bootstrap";
 @import "bootstrap-icons/font/bootstrap-icons.css";
+

@@ -5,17 +5,18 @@ import {TrimPipe} from '../core/pipe/trim.pipe';
   selector: 'app-footer',
   template: `
 
-    <footer class="border-top border-primary bg-primary text-white py-5">
+    <footer class="border-top border-primary bg-blue-darker text-white pb-3 pt-1">
       <div class="container-fluid px-4">
         <div class="row">
           <div class="col-12">
             <!--            <div class="d-flex gap-2 align-items-center mb-3">-->
-            <img width="200px" src="logoWhite.png" alt="logoWhite">
+<!--            <img width="200px" src="logoWhite.png" alt="logoWhite">-->
+            <img style="max-width: 100%; width:500px" src="DS-footer.png" alt="logoWhite">
             <!--            </div>-->
           </div>
         </div>
 
-        <div class="row g-4 align-items-start mt-3">
+        <div class="row g-4 align-items-start mt-1">
           <div class="col-md-6">
             <h3 class="h6 fw-semibold mb-3">Lo Studio</h3>
             <p class="text-white mb-3" style="text-align: justify">
@@ -29,7 +30,7 @@ import {TrimPipe} from '../core/pipe/trim.pipe';
             <ul class="list-unstyled text-white">
               <li class="d-flex align-items-start mb-2">
                 <i class="bi bi-geo-alt-fill"></i>
-                <span class="ms-2">Viale Parioli, 93/G, 00197 Roma (RM)</span>
+                <span class="ms-2">Viale Parioli, 93, 00197 Roma (RM)</span>
               </li>
               <li class="d-flex align-items-start mb-2">
                 <i class="bi bi-geo-alt-fill"></i>
@@ -54,7 +55,7 @@ import {TrimPipe} from '../core/pipe/trim.pipe';
             <h3 class="h6 fw-semibold mb-3">Orari</h3>
             <ul class="list-unstyled text-white">
               <li>Lunedì - Venerdì: 9:00 - 18:00</li>
-              <li>Sabato: 9:00 - 13:00</li>
+              <li>Sabato: Chiuso</li>
               <li>Domenica: Chiuso</li>
             </ul>
           </div>

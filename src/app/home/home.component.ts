@@ -6,7 +6,7 @@ import {RouterLink} from '@angular/router';
   template: `
     <div>
       <!-- Hero Section -->
-      <section class="position-relative bg-primary bg-gradient text-white py-5">
+      <section class="position-relative bg-blue-darker bg-gradient text-white py-5">
         <div class="container-fluid px-4">
           <div class="row">
             <div class="col-12 col-md-10">

@@ -23,39 +23,20 @@ declare var bootstrap: any;
               <div class="p-4">
                 <div class="d-flex align-items-start">
                   <div class="me-3 p-3 bg-primary-subtle rounded-circle">
-                    <span class="material-symbols-outlined">gavel</span>
+                    <span class="material-symbols-outlined">business_center</span>
                   </div>
                   <div>
-                    <h3 class="h5 fw-bold text-primary">Diritto Civile</h3>
+                    <h3 class="h5 fw-bold text-primary">Diritto Commerciale</h3>
                     <p class="text-secondary mt-2">
-                      Assistenza e consulenza in tutte le branche del diritto civile: famiglia, successioni, responsabilità civile e risarcimento danni.
+                      Assistenza e consulenza ad imprese e società operanti sul territorio nazionale.
                     </p>
                   </div>
                 </div>
               </div>
               <div class="p-4">
-                <button class="btn btn-primary w-100" (click)="openModal(LawEnum.CIVILE)">Maggiori Informazioni</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="border border-primary-subtle shadow-sm hover-shadow-lg transition rounded bg-white h-100 d-flex flex-column justify-content-between">
-              <div class="p-4">
-                <div class="d-flex align-items-start">
-                  <div class="me-3 p-3 bg-primary-subtle rounded-circle">
-                    <span class="material-symbols-outlined">groups</span>
-                  </div>
-                  <div>
-                    <h3 class="h5 fw-bold text-primary">Diritto del Lavoro</h3>
-                    <p class="text-secondary mt-2">
-                      Assistenza e consulenza in ambito giuslavoristico.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="p-4">
-                <button class="btn btn-primary w-100" (click)="openModal(LawEnum.LAVORO)">Maggiori Informazioni</button>
+                <button class="btn btn-primary w-100" (click)="openModal(LawEnum.COMMERCIALE)">Maggiori
+                  Informazioni
+                </button>
               </div>
             </div>
           </div>
@@ -86,6 +67,27 @@ declare var bootstrap: any;
               <div class="p-4">
                 <div class="d-flex align-items-start">
                   <div class="me-3 p-3 bg-primary-subtle rounded-circle">
+                    <span class="material-symbols-outlined">gavel</span>
+                  </div>
+                  <div>
+                    <h3 class="h5 fw-bold text-primary">Diritto Civile</h3>
+                    <p class="text-secondary mt-2">
+                      Assistenza e consulenza in tutte le branche del diritto civile: famiglia, successioni, responsabilità civile e risarcimento danni.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="p-4">
+                <button class="btn btn-primary w-100" (click)="openModal(LawEnum.CIVILE)">Maggiori Informazioni</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="border border-primary-subtle shadow-sm hover-shadow-lg transition rounded bg-white h-100 d-flex flex-column justify-content-between">
+              <div class="p-4">
+                <div class="d-flex align-items-start">
+                  <div class="me-3 p-3 bg-primary-subtle rounded-circle">
                     <span class="material-symbols-outlined">apartment</span>
                   </div>
                   <div>
@@ -98,51 +100,6 @@ declare var bootstrap: any;
               </div>
               <div class="p-4">
                 <button class="btn btn-primary w-100" (click)="openModal(LawEnum.SOCIETARIO)">Maggiori Informazioni</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="border border-primary-subtle shadow-sm hover-shadow-lg transition rounded bg-white h-100 d-flex flex-column justify-content-between">
-              <div class="p-4">
-                <div class="d-flex align-items-start">
-                  <div class="me-3 p-3 bg-primary-subtle rounded-circle">
-                    <span class="material-symbols-outlined">handshake</span>
-                  </div>
-                  <div>
-                    <h3 class="h5 fw-bold text-primary">Soluzioni Alternative alle Controversie</h3>
-                    <p class="text-secondary mt-2">
-                      Assistenza e consulenza nella risoluzione alternativa delle controversie.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="p-4">
-                <button class="btn btn-primary w-100" (click)="openModal(LawEnum.MEDIAZIONE)">Maggiori Informazioni
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="border border-primary-subtle shadow-sm hover-shadow-lg transition rounded bg-white h-100 d-flex flex-column justify-content-between">
-              <div class="p-4">
-                <div class="d-flex align-items-start">
-                  <div class="me-3 p-3 bg-primary-subtle rounded-circle">
-                    <span class="material-symbols-outlined">business_center</span>
-                  </div>
-                  <div>
-                    <h3 class="h5 fw-bold text-primary">Diritto Commerciale</h3>
-                    <p class="text-secondary mt-2">
-                      Assistenza e consulenza ad imprese e società operanti sul territorio nazionale.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="p-4">
-                <button class="btn btn-primary w-100" (click)="openModal(LawEnum.COMMERCIALE)">Maggiori
-                  Informazioni
-                </button>
               </div>
             </div>
           </div>
@@ -175,18 +132,18 @@ declare var bootstrap: any;
               <div class="p-4">
                 <div class="d-flex align-items-start">
                   <div class="me-3 p-3 bg-primary-subtle rounded-circle">
-                    <span class="material-symbols-outlined">shield</span>
+                    <span class="material-symbols-outlined">clinical_notes</span>
                   </div>
                   <div>
-                    <h3 class="h5 fw-bold text-primary">Diritto Penale</h3>
+                    <h3 class="h5 fw-bold text-primary">Consulenza Legale Continuativa</h3>
                     <p class="text-secondary mt-2">
-                      Difesa in giudizi penali in tutti i gradi di giudizio.
+                      Sempre al fianco delle imprese, senza sorprese.
                     </p>
                   </div>
                 </div>
               </div>
               <div class="p-4">
-                <button class="btn btn-primary w-100" (click)="openModal(LawEnum.PENALE)">Maggiori
+                <button class="btn btn-primary w-100" (click)="openModal(LawEnum.CONSULENZA_LEGALE_CONTINUATIVA)">Maggiori
                   Informazioni
                 </button>
               </div>
@@ -221,6 +178,72 @@ declare var bootstrap: any;
               <div class="p-4">
                 <div class="d-flex align-items-start">
                   <div class="me-3 p-3 bg-primary-subtle rounded-circle">
+                    <span class="material-symbols-outlined">handshake</span>
+                  </div>
+                  <div>
+                    <h3 class="h5 fw-bold text-primary">Soluzioni Alternative alle Controversie</h3>
+                    <p class="text-secondary mt-2">
+                      Assistenza e consulenza nella risoluzione alternativa delle controversie.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="p-4">
+                <button class="btn btn-primary w-100" (click)="openModal(LawEnum.MEDIAZIONE)">Maggiori Informazioni
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="border border-primary-subtle shadow-sm hover-shadow-lg transition rounded bg-white h-100 d-flex flex-column justify-content-between">
+              <div class="p-4">
+                <div class="d-flex align-items-start">
+                  <div class="me-3 p-3 bg-primary-subtle rounded-circle">
+                    <span class="material-symbols-outlined">shield</span>
+                  </div>
+                  <div>
+                    <h3 class="h5 fw-bold text-primary">Diritto Penale</h3>
+                    <p class="text-secondary mt-2">
+                      Difesa in giudizi penali in tutti i gradi di giudizio.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="p-4">
+                <button class="btn btn-primary w-100" (click)="openModal(LawEnum.PENALE)">Maggiori
+                  Informazioni
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="border border-primary-subtle shadow-sm hover-shadow-lg transition rounded bg-white h-100 d-flex flex-column justify-content-between">
+              <div class="p-4">
+                <div class="d-flex align-items-start">
+                  <div class="me-3 p-3 bg-primary-subtle rounded-circle">
+                    <span class="material-symbols-outlined">groups</span>
+                  </div>
+                  <div>
+                    <h3 class="h5 fw-bold text-primary">Diritto del Lavoro</h3>
+                    <p class="text-secondary mt-2">
+                      Assistenza e consulenza in ambito giuslavoristico.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="p-4">
+                <button class="btn btn-primary w-100" (click)="openModal(LawEnum.LAVORO)">Maggiori Informazioni</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="border border-primary-subtle shadow-sm hover-shadow-lg transition rounded bg-white h-100 d-flex flex-column justify-content-between">
+              <div class="p-4">
+                <div class="d-flex align-items-start">
+                  <div class="me-3 p-3 bg-primary-subtle rounded-circle">
                     <span class="material-symbols-outlined">tactic</span>
                   </div>
                   <div>
@@ -233,29 +256,6 @@ declare var bootstrap: any;
               </div>
               <div class="p-4">
                 <button class="btn btn-primary w-100" (click)="openModal(LawEnum.PROGETTAZIONE_BANDI_NAZIONALI_EUROPEI)">Maggiori
-                  Informazioni
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="border border-primary-subtle shadow-sm hover-shadow-lg transition rounded bg-white h-100 d-flex flex-column justify-content-between">
-              <div class="p-4">
-                <div class="d-flex align-items-start">
-                  <div class="me-3 p-3 bg-primary-subtle rounded-circle">
-                    <span class="material-symbols-outlined">clinical_notes</span>
-                  </div>
-                  <div>
-                    <h3 class="h5 fw-bold text-primary">Consulenza Legale Continuativa</h3>
-                    <p class="text-secondary mt-2">
-                      Sempre al fianco delle imprese, senza sorprese.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="p-4">
-                <button class="btn btn-primary w-100" (click)="openModal(LawEnum.CONSULENZA_LEGALE_CONTINUATIVA)">Maggiori
                   Informazioni
                 </button>
               </div>
@@ -314,7 +314,7 @@ export class ServicesComponent {
       {
         "nome": LawEnum.IMMOBILIARE,
         "titolo": "Diritto Immobiliare",
-        "descrizione": "Assistiamo privati e imprese in tutte le operazioni immobiliari. La nostra consulenza copre la negoziazione e stesura di contratti di compravendita, preliminari, locazione (abitativa e commerciale) e tutti i negozi aventi ad oggetto diritti reali. Siamo al fianco del cliente in tutta la gestione legale del patrimonio immobiliare e nelle fasi che precedono l’acquisto o la vendita di immobili, relazionandoci con gli operatori economici (imprese di costruzioni, mediatori, tecnici) in rappresentanza dei nostri clienti."
+        "descrizione": "Assistiamo privati e imprese in tutte le operazioni immobiliari. La nostra consulenza copre la negoziazione e stesura di contratti di compravendita, preliminari, locazione (abitativa e commerciale) e tutti i negozi aventi ad oggetto diritti reali. Offriamo consulenza nell'acquisto di immobili all'asta e nelle altre procedure competitive. Siamo al fianco del cliente in tutta la gestione legale del patrimonio immobiliare e nelle fasi che precedono l’acquisto o la vendita di immobili, relazionandoci con gli operatori economici (imprese di costruzioni, mediatori, tecnici) in rappresentanza dei nostri clienti."
       },
       {
         "nome": LawEnum.CONTENZIOSO,

@@ -1,50 +1,55 @@
 import { Component, signal } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
-import {NgClass, NgIf} from '@angular/common';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-header',
   template: `
-    <header class="position-sticky top-0 z-3 border-bottom border-primary-subtle bg-white shadow-sm">
+    <header class="position-sticky top-0 z-3 border-bottom border-primary-subtle bg-blue-darker shadow-sm">
       <div class="container-fluid py-1">
         <div class="d-flex align-items-center justify-content-between">
           <div class="d-flex align-items-center gap-2">
-            <img width="100px" src="logoBlue.png" alt="logoBlue">
-            <h1 class="fs-5 fw-bold text-primary mb-0 lh-sm d-none d-lg-block">
-              Studio Legale Associato<br />D'Uffizi & Scaramella
+<!--            <img width="100px" src="logoBlue.png" alt="logoBlue">-->
+            <img width="100px" src="DS-header.png" alt="logoBlue">
+            <h1 class="fs-5 fw-bold text-white mb-0 lh-sm d-none d-lg-block">
+              D'Uffizi & Scaramella<br />Studio Legale Associato
             </h1>
           </div>
 
           <!-- Desktop Navigation -->
           <nav class="d-none d-md-flex">
             <a routerLink="/home"
-               routerLinkActive="bg-primary text-white"
+               routerLinkActive="bg-white text-primary"
+               #rlaHome="routerLinkActive"
                class="d-flex align-items-center gap-1 px-3 py-2 rounded text-decoration-none"
-               [ngClass]="isActive('/home') ? 'bg-primary text-white' : 'text-primary bg-light-hover'"
+               [class.text-white]="!rlaHome.isActive"
             >
               <i class="bi bi-house-door"></i>
               <span>Home</span>
             </a>
             <a routerLink="/avvocati"
-               routerLinkActive="bg-primary text-white"
+               routerLinkActive="bg-white text-primary"
+               #rlaAvvocati="routerLinkActive"
                class="d-flex align-items-center gap-1 px-3 py-2 rounded text-decoration-none"
-               [ngClass]="isActive('/avvocati') ? 'bg-primary text-white' : 'text-primary bg-light-hover'"
+               [class.text-white]="!rlaAvvocati.isActive"
             >
               <i class="bi bi-people-fill"></i>
               <span>Avvocati</span>
             </a>
             <a routerLink="/servizi"
-               routerLinkActive="bg-primary text-white"
+               routerLinkActive="bg-white text-primary"
+               #rlaServizi="routerLinkActive"
                class="d-flex align-items-center gap-1 px-3 py-2 rounded text-decoration-none"
-               [ngClass]="isActive('/servizi') ? 'bg-primary text-white' : 'text-primary bg-light-hover'"
+               [class.text-white]="!rlaServizi.isActive"
             >
               <i class="bi bi-briefcase-fill"></i>
               <span>Servizi</span>
             </a>
             <a routerLink="/contatti"
-               routerLinkActive="bg-primary text-white"
+               routerLinkActive="bg-white text-primary"
+               #rlaContatti="routerLinkActive"
                class="d-flex align-items-center gap-1 px-3 py-2 rounded text-decoration-none"
-               [ngClass]="isActive('/contatti') ? 'bg-primary text-white' : 'text-primary bg-light-hover'"
+               [class.text-white]="!rlaContatti.isActive"
             >
               <i class="bi bi-envelope-fill"></i>
               <span>Contatti</span>
@@ -72,36 +77,40 @@ import {NgClass, NgIf} from '@angular/common';
         <!-- Mobile Navigation -->
         <nav *ngIf="isMenuOpen()" class="mt-3 d-flex flex-column gap-2 d-md-none">
           <a routerLink="/home"
-             routerLinkActive="bg-primary text-white"
+             routerLinkActive="bg-white text-primary"
+             #rlaHome="routerLinkActive"
              class="d-flex align-items-center gap-1 px-3 py-2 rounded text-decoration-none"
-             [ngClass]="isActive('/home') ? 'bg-primary text-white' : 'text-primary'"
+             [class.text-white]="!rlaHome.isActive"
              (click)="closeMenu()">
             <i class="bi bi-house-door"></i>
             <span>Home</span>
           </a>
 
           <a routerLink="/avvocati"
-             routerLinkActive="bg-primary text-white"
+             routerLinkActive="bg-white text-primary"
+             #rlaAvvocati="routerLinkActive"
              class="d-flex align-items-center gap-1 px-3 py-2 rounded text-decoration-none"
-             [ngClass]="isActive('/avvocati') ? 'bg-primary text-white' : 'text-primary'"
+             [class.text-white]="!rlaAvvocati.isActive"
              (click)="closeMenu()">
             <i class="bi bi-people-fill"></i>
             <span>Avvocati</span>
           </a>
 
           <a routerLink="/servizi"
-             routerLinkActive="bg-primary text-white"
+             routerLinkActive="bg-white text-primary"
+             #rlaServizi="routerLinkActive"
              class="d-flex align-items-center gap-1 px-3 py-2 rounded text-decoration-none"
-             [ngClass]="isActive('/servizi') ? 'bg-primary text-white' : 'text-primary'"
+             [class.text-white]="!rlaServizi.isActive"
              (click)="closeMenu()">
             <i class="bi bi-briefcase-fill"></i>
             <span>Servizi</span>
           </a>
 
           <a routerLink="/contatti"
-             routerLinkActive="bg-primary text-white"
+             routerLinkActive="bg-white text-primary"
+             #rlaContatti="routerLinkActive"
              class="d-flex align-items-center gap-1 px-3 py-2 rounded text-decoration-none"
-             [ngClass]="isActive('/contatti') ? 'bg-primary text-white' : 'text-primary'"
+             [class.text-white]="!rlaContatti.isActive"
              (click)="closeMenu()">
             <i class="bi bi-envelope-fill"></i>
             <span>Contatti</span>
@@ -111,7 +120,7 @@ import {NgClass, NgIf} from '@angular/common';
     </header>
   `,
   standalone: true,
-  imports: [RouterLink, RouterLinkActive, NgIf, NgClass]
+  imports: [RouterLink, RouterLinkActive, NgIf],
 })
 export class HeaderComponent {
   menuOpen = signal(false);
@@ -132,4 +141,5 @@ export class HeaderComponent {
     // Implementa la logica di route attiva, se necessario
     return false;
   }
+
 }

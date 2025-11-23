@@ -109,7 +109,7 @@ declare var bootstrap: any;
               </div>
               <div>
                 <h5 class="fw-semibold text-primary mb-1">Indirizzi</h5>
-                <p class="text-secondary mb-1">Viale Parioli, 93/G, 00197 Roma (RM)</p>
+                <p class="text-secondary mb-1">Viale Parioli, 93, 00197 Roma (RM)</p>
                 <hr style="border-top: #1e40af 2px dashed">
                 <p class="text-secondary mb-0">Via Casilina, 243, 00038 Valmontone (RM)</p>
               </div>
@@ -153,7 +153,7 @@ declare var bootstrap: any;
                 <h5 class="fw-semibold text-primary mb-1">Orari di Apertura</h5>
                 <p class="text-secondary mb-0">
                   Lunedì - Venerdì: 9:00 - 18:00<br/>
-                  Sabato: 9:00 - 13:00<br/>
+                  Sabato: Chiuso<br/>
                   Domenica: Chiuso
                 </p>
               </div>
@@ -166,7 +166,7 @@ declare var bootstrap: any;
 
             <div class="row">
               <div class="col-12 col-md-6">
-                <p class="text-secondary">Viale Parioli, 93/G, 00197 Roma (RM)</p>
+                <p class="text-secondary">Viale Parioli, 93, 00197 Roma (RM)</p>
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5936.6888887486275!2d12.48342137602582!3d41.92844936226031!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f612047f3b241%3A0x946d05a9a1a8d687!2sViale%20Parioli%2C%2093%2C%2000197%20Roma%20RM!5e0!3m2!1sen!2sit!4v1759936890533!5m2!1sen!2sit"
                   class="w-100" height="450" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy"
